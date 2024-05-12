@@ -1,0 +1,7 @@
+<app-header></app-header>
+
+<ul *ngFor="let user of users">
+  <li>{{ user.username }}</li>
+</ul>
+
+<button (click)="signgout()">Logout</button>
