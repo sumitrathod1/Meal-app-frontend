@@ -1,7 +1,42 @@
 <app-header></app-header>
 
-<ul *ngFor="let user of users">
+<!-- <ul *ngFor="let user of users">
   <li>{{ user.username }}</li>
-</ul>
+</ul> -->
 
-<button (click)="signgout()">Logout</button>
+<!-- <button (click)="signgout()">Logout</button> -->
+
+<button id="viewBooking" class="btn btn-danger">View Booking</button>
+
+<mat-card class="demo-inline-calendar-card">
+  <mat-calendar
+    [(selected)]="selected"
+    [dateClass]="dateClassPredicate"
+  ></mat-calendar>
+  <p>Selected date: {{ selected }}</p>
+</mat-card>
+
+<div class="Meal-Day">
+  <table>
+    <tr>
+      <th>Lunch</th>
+      <th>Dinner</th>
+    </tr>
+    <tr>
+      <td>Bhinda fry</td>
+      <td>Bhinda fry</td>
+    </tr>
+    <tr>
+      <td>Rice</td>
+      <td>Rice</td>
+    </tr>
+    <tr>
+      <td>Dal</td>
+      <td>Dal</td>
+    </tr>
+    <tr>
+      <td>Roti</td>
+      <td>Roti</td>
+    </tr>
+  </table>
+</div>

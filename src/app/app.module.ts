@@ -18,6 +18,12 @@ import { TokenInterceptor } from './interceptors/token.interceptor';
 import { AboutUsComponent } from './StaticPages/about-us/about-us.component';
 import { PrivacyPolicyComponent } from './StaticPages/privacy-policy/privacy-policy.component';
 import { TermsAndConditionsComponent } from './StaticPages/terms-and-conditions/terms-and-conditions.component';
+import { CalendarComponent } from './Component/Home/calendar/calendar.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { NativeDateModule } from '@angular/material/core';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCardModule } from '@angular/material/card';
 import { ResetComponent } from './Component/reset/reset.component';
 
 @NgModule({
@@ -31,6 +37,7 @@ import { ResetComponent } from './Component/reset/reset.component';
     AboutUsComponent,
     PrivacyPolicyComponent,
     TermsAndConditionsComponent,
+    CalendarComponent,
     ResetComponent,
   ],
   imports: [
@@ -43,6 +50,12 @@ import { ResetComponent } from './Component/reset/reset.component';
     MatButtonModule,
     MatIconModule,
     NgToastModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    NativeDateModule,
+    MatNativeDateModule,
+    MatIconModule,
+    MatCardModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },

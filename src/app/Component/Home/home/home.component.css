@@ -1,0 +1,57 @@
+.demo-inline-calendar-card {
+  width: 400px;
+  top: 150px;
+  left: 25%;
+}
+.btn {
+  position: relative;
+  top: 100px;
+  left: 21%;
+}
+.Meal-Day {
+  position: absolute;
+  top: 250px;
+  left: 70%;
+  transform: translateX(-50%);
+}
+
+.Meal-Card {
+  background-color: #3498db;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  width: 300px;
+}
+
+.Meal-Card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+table {
+  width: 300px;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+}
+
+th {
+  background-color: #2980b9;
+}
+
+td {
+  background-color: #ecf0f1;
+  color: #333;
+}
+
+.disabled-date {
+  opacity: 0.5;
+  pointer-events: none;
+}

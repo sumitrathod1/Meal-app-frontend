@@ -8,6 +8,7 @@
             class="logo"
             alt="Rishab Software"
           />
+          <span>Meal Facility</span>
         </div>
       </div>
       <div class="col-md-9 col-sm-9 col-6 text-end">
@@ -16,11 +17,11 @@
         </div>
         <div class="desktop_menu" [class.mobile_menu]="menuValue">
           <ul>
-            <li (click)="closeMenu()">Home</li>
-            <li (click)="closeMenu()">About</li>
-            <li (click)="closeMenu()">Courses</li>
-            <li (click)="closeMenu()">Contact</li>
-            <li (click)="logout()">Logout</li>
+            <li (click)="closeMenu()" routerLink="/login">Home</li>
+            <li (click)="closeMenu()" routerLink="/aboutus">About</li>
+            <li (click)="closeMenu()" routerLink="/policy">Policy</li>
+            <li (click)="closeMenu()" routerLink="/terms">Terms</li>
+            <li (click)="logout()" routerLink="/login">Logout</li>
             <li>Hello, {{ fullName }}</li>
           </ul>
         </div>

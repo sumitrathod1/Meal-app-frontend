@@ -13,7 +13,7 @@ export class RestPasswordService {
     return this.http.post<any>(`${this.baseUrl}/send-reset-email/${email}`, {});
   }
 
-  resetPasswor(resetPasswordObj: ResetPassword) {
+  resetPassword(resetPasswordObj: ResetPassword) {
     return this.http.post<any>(
       `${this.baseUrl}/reset-password`,
       resetPasswordObj

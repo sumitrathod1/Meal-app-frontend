@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, Router, UrlTree } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { NgToastService } from 'ng-angular-popup';
 import { RestPasswordService } from 'src/app/Services/rest-password.service';
 import { ConfirmPasswordValidator } from 'src/app/Shared/confirm-password.validator';
@@ -37,8 +37,9 @@ export class ResetComponent implements OnInit {
       }
     );
     this.activatedRoute.queryParams.subscribe((val) => {
+      console.log(val);
       this.emailToRest = val['email'];
-      let urItoken = val['email'];
+      let urItoken = val['code'];
       this.emailToken = urItoken.replace(/ /g, '+');
       console.log(this.emailToken);
       console.log(this.emailToRest);
@@ -52,12 +53,13 @@ export class ResetComponent implements OnInit {
       this.resetPasswordObj.confirmPassword =
         this.resestPasswordForm.value.confirmPassword;
       this.resetPasswordObj.emailToken = this.emailToken;
-      this.resetService.resetPasswor(this.resetPasswordObj).subscribe({
+
+      this.resetService.resetPassword(this.resetPasswordObj).subscribe({
         next: (res) => {
           this.toast.success({
             detail: 'SUCCESS',
-            summary: 'Password reset successfully',
-            duration: 3000,
+            summary: res.message,
+            duration: 2000,
           });
 
           this.router.navigate(['/']);
@@ -65,8 +67,8 @@ export class ResetComponent implements OnInit {
         error: (err) => {
           this.toast.error({
             detail: 'Error',
-            summary: 'error',
-            duration: 3000,
+            summary: 'Somthing went wrong',
+            duration: 2000,
           });
         },
       });

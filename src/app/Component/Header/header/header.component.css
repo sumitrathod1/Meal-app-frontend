@@ -4,6 +4,19 @@ header {
 }
 .logo {
   width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+span {
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  text-align: center;
+  font-size: 30px;
+  left: 12%;
 }
 .logo:hover {
   cursor: pointer;
