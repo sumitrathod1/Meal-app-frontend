@@ -23,26 +23,4 @@ const year = today.getFullYear();
   templateUrl: './booking.component.html',
   styleUrls: ['./booking.component.css'],
 })
-export class BookingComponent implements OnInit, OnDestroy {
-  bookingForm!: FormGroup;
-  isFormVisible = false;
-  private subscription: Subscription = new Subscription();
-
-  campaignOne = new FormGroup({
-    start: new FormControl(new Date()),
-    end: new FormControl(new Date()),
-  });
-
-  campaignTwo = new FormGroup({
-    start: new FormControl(new Date()),
-    end: new FormControl(new Date()),
-  });
-
-  constructor(private fb: FormBuilder) {}
-
-  ngOnInit(): void {}
-
-  ngOnDestroy(): void {
-    this.subscription.unsubscribe();
-  }
-}
+export class BookingComponent {}
