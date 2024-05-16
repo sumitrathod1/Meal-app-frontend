@@ -8,7 +8,7 @@ import { UserStoreService } from 'src/app/Services/user-store.service';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  public fullName: string = '';
+  public fullName: string = 'Arnov';
 
   menuValue: boolean = false;
   menu_icon: string = 'bi bi-list';

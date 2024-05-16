@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
           this.toast.success({
             detail: 'SUCCESS',
             summary: res.message,
-            duration: 5000,
+            duration: 3000,
           });
 
           this.router.navigate(['/home']);

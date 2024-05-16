@@ -11,19 +11,29 @@ import { PrivacyPolicyComponent } from './StaticPages/privacy-policy/privacy-pol
 import { ResetComponent } from './Component/reset/reset.component';
 import { TermsAndConditionsComponent } from './StaticPages/terms-and-conditions/terms-and-conditions.component';
 import { CalendarComponent } from './Component/Home/calendar/calendar.component';
+import { BookingComponent } from './Component/Home/booking/booking.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'booking', component: BookingComponent },
   { path: 'signup', component: SignupComponent },
-  { path: 'header', component: HeaderComponent, canActivate: [authGuard] },
+  { path: 'header', component: HeaderComponent },
   { path: 'forget', component: ForgotpasswordComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'calander', component: CalendarComponent },
-  { path: 'aboutus', component: AboutUsComponent },
-  { path: 'policy', component: PrivacyPolicyComponent },
-  { path: 'reset', component: ResetComponent },
-  { path: 'terms', component: TermsAndConditionsComponent },
+  { path: 'home', component: HomeComponent, canActivate: [authGuard] },
+  { path: 'calander', component: CalendarComponent, canActivate: [authGuard] },
+  { path: 'aboutus', component: AboutUsComponent, canActivate: [authGuard] },
+  {
+    path: 'policy',
+    component: PrivacyPolicyComponent,
+    canActivate: [authGuard],
+  },
+  { path: 'reset', component: ResetComponent, canActivate: [authGuard] },
+  {
+    path: 'terms',
+    component: TermsAndConditionsComponent,
+    canActivate: [authGuard],
+  },
 ];
 
 @NgModule({

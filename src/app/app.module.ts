@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { MatRadioModule } from '@angular/material/radio';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +26,12 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 import { ResetComponent } from './Component/reset/reset.component';
+import { BookingComponent } from './Component/Home/booking/booking.component';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
+
+// -----------------------------------------------------
 
 @NgModule({
   declarations: [
@@ -39,6 +46,7 @@ import { ResetComponent } from './Component/reset/reset.component';
     TermsAndConditionsComponent,
     CalendarComponent,
     ResetComponent,
+    BookingComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,6 +64,10 @@ import { ResetComponent } from './Component/reset/reset.component';
     MatNativeDateModule,
     MatIconModule,
     MatCardModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatRadioModule,
+    MatRadioModule,
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },

@@ -1,12 +1,18 @@
 .demo-inline-calendar-card {
   width: 400px;
-  top: 150px;
+  top: 120px;
   left: 25%;
 }
-.btn {
+#viewBooking {
   position: relative;
-  top: 100px;
+  top: 80px;
   left: 21%;
+}
+
+#AddBooking {
+  position: relative;
+  top: 180px;
+  left: 51.5%;
 }
 .Meal-Day {
   position: absolute;

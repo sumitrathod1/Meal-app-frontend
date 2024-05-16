@@ -1,7 +1,7 @@
 <app-header></app-header>
 
 <!-- <ul *ngFor="let user of users">
-  <li>{{ user.username }}</li>
+  <!-- <li>{{ user.username }}</li>
 </ul> -->
 
 <!-- <button (click)="signgout()">Logout</button> -->
@@ -10,11 +10,16 @@
 
 <mat-card class="demo-inline-calendar-card">
   <mat-calendar
-    [(selected)]="selected"
-    [dateClass]="dateClassPredicate"
-  ></mat-calendar>
-  <p>Selected date: {{ selected }}</p>
+    class="calander"
+    [(selected)]="selectedDate"
+    [dateFilter]="preventSelection"
+    (selectedChange)="updateSelectedTime()"
+  >
+  </mat-calendar>
+  <p>Selected date: {{ selectedDate }}</p>
 </mat-card>
+
+<button id="AddBooking" class="btn btn-danger">Add Booking</button>
 
 <div class="Meal-Day">
   <table>
@@ -40,3 +45,4 @@
     </tr>
   </table>
 </div>
+<button mat-raised-button color="primary">Add Booking</button>
